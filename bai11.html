@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tinh thue thu nhap ca nhan</title>
+</head>
+<body>
+    <script>
+        alert("Chuong trinh tinh thue thu nhap ca nhan");
+        let tax = 0;
+        let salary = parseInt(prompt("enter your salary(VND) "));
+        if (salary >= 0) {
+            if (salary > 9000000) {
+                tax = salary * 0.1;
+                alert("Thue cua ban la : " + tax);
+            }else {
+                alert("Ban khong can dong thue ca nhan");
+            }
+        }else {
+            alert("NHap sai")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giai PT bac 2</title>
+</head>
+<body>
+    <script>
+        alert("Giai PT bac 2 Ax2 + Bx + C = 0");
+        let numberOne = parseFloat(prompt("enter number one a = "));
+        let numberTwo = parseFloat(prompt("enter number two b = "));
+        let numberThree = parseFloat(prompt("enter number three c = "));
+        if (numberOne === 0){
+            if (numberTwo === 0){
+                if (numberThree === 0){
+                    alert("PT co vo so nghiem")
+                }else {
+                    alert("PT vo nghiem")
+                }
+            }else {
+                let result = -numberThree / numberTwo;
+                alert("PT co nghiem x = " + result);
+            }
+        }else {
+            let delta = (numberTwo * numberTwo) - (4 * numberOne * numberThree);
+            if (delta < 0){
+                alert("PT vo nghiem")
+            }else if (delta === 0){
+                let result = -numberTwo / (2 * numberOne)
+                alert("PT co nghiem kep x1 = x2 = " + result)
+            }else {
+                let x1 = (-numberTwo - Math.sqrt(delta)) / (2 * numberOne);
+                let x2 = (-numberTwo + Math.sqrt(delta)) / (2 * numberOne);
+                alert("PT co 2 nghiem phan biet x1 = "+ x1 + " ; x2 = " + x2);
+            }
+        }
+    </script>
+</body>
+</html>

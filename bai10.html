@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tinh tien dien</title>
+</head>
+<body>
+    <script>
+        alert("Chuong trinh tinh tien dien");
+        let electric = parseInt(prompt("enter so dien trong thang : "));
+        let money = 0;
+        if(electric >= 0){
+            if(electric >= 400){
+                money = (50 * 1.7) + (50 * 2) + (100 * 2.5) + (100 * 3) + (100 * 3.5) + ((electric - 400) * 4);
+            }else if (electric >= 300){
+                money = (50 * 1.7) + (50 * 2) + (100 * 2.5) + (100 * 3) + ((electric - 300) * 3.5);
+            }else if (electric >= 200){
+                money = (50 * 1.7) + (50 * 2) + (100 * 2.5) + ((electric - 200) * 3);
+            }else if (electric >= 100){
+                money = (50 * 1.7) + (50 * 2) + ((electric - 100) * 2.5);
+            }else if (electric >= 50){
+                money = (50 * 1.7) + ((electric - 50) * 2);
+            }else {
+                money = electric * 1.7;
+            }
+            alert("So tien phai tra la : " + money);
+        }else {
+            alert("Nhap sai")
+        }
+    </script>
+</body>
+</html>
